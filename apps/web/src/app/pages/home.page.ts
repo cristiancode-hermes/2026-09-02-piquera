@@ -44,7 +44,7 @@ import { euros, HomeDto } from '../shared/models';
                 @for (y of h.yardsOpen; track y.slug) {
                   <li>
                     <a [routerLink]="['/colmenares', y.slug]">{{ y.name }}</a>
-                    <span>{{ y.status === 'closed' ? 'Cerrado' : y.remaining + ' huecos de sello' }}</span>
+                    <span>{{ y.status === 'closed' ? 'Cerrado' : 'Aforo restante ' + y.remaining }}</span>
                   </li>
                 }
               </ul>
