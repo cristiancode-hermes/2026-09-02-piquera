@@ -19,7 +19,7 @@ import { AuthService } from '../core/auth.service';
         </section>
       } @else if (harvest(); as h) {
         <p class="lede">{{ h.yardName || 'Patio' }} · {{ h.startsOn }} — {{ h.endsOn }} · mínimo {{ h.minStamps }} sellos · {{ h.jarsRemaining }}/{{ h.jarsTotal }} tarros.</p>
-        @if (ctaError()) { <p class="hold-error" id="claim-action" role="alert">{{ ctaError() }}</p> }
+        @if (ctaError()) { <p class="hold-error" role="alert">{{ ctaError() }}</p> }
         @if (ok()) { <p>Tarro reclamado. Recógelo en la piquera.</p> }
         @if (auth.isAuthenticated()) {
           <button class="btn btn-primary" id="claim-action" type="button" [disabled]="busy()" (click)="claim(h.id)">Reclamar tarro</button>

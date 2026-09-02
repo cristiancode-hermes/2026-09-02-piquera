@@ -25,7 +25,7 @@ import { humanizeApiError, Yard } from '../shared/models';
           }
         </div>
         @if (ok()) { <p class="muted">Sello anotado.</p> }
-        @if (ctaError()) { <p class="hold-error" id="stamp-action" role="alert">{{ ctaError() }}</p> }
+        @if (ctaError()) { <p class="hold-error" role="alert">{{ ctaError() }}</p> }
         <button class="btn btn-primary" id="stamp-action" type="button" [disabled]="!yardId() || busy()" (click)="stamp()">
           {{ busy() ? 'Sellando…' : 'Sellar hoy' }}
         </button>

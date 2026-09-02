@@ -43,7 +43,7 @@ import { Addon, euros, humanizeApiError, PassProduct } from '../shared/models';
           <li><strong>Total</strong><strong>{{ euros(total()) }}</strong></li>
         </ul>
         @if (ctaError()) {
-          <p class="hold-error" id="checkout-action" role="alert">{{ ctaError() }}</p>
+          <p class="hold-error" role="alert">{{ ctaError() }}</p>
         }
         <button class="btn btn-primary" id="checkout-action" type="button" [disabled]="busy() || !productId()" (click)="pay()">
           {{ busy() ? 'Cobrando…' : 'Pagar ahora' }}
