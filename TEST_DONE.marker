@@ -1,0 +1,7 @@
+QA testing complete for 2026-09-02
+Project: piquera
+Build: ✅ API tsc + web ng production
+Tests: 15/15 passing (Jest)
+New tests: existing coverage adequate
+Issues: 0 graves (CTA ids + hueco copy + .env leftover fixed in QA)
+Published: ✅ Caddy (piquera.proyectos.cristiancode.dev :3082), ✅ Portfolio (es.ts+en.ts+pt.ts), ✅ GitHub, ✅ Landing, ✅ Excel
